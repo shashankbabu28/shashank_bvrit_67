@@ -23,8 +23,7 @@ public interface StudentArrayOperation {
 	 * 
 	 * @throws IllegalArgumentException
 	 */
-	void setStudents(Student[] students) {
-		
+	void setStudents(Student[] students);
 	
 	
 
@@ -35,7 +34,7 @@ public interface StudentArrayOperation {
 	 * @param index
 	 */
 	Student getStudent(int index);
-	}
+	
 
 	
 	/**
@@ -198,7 +197,7 @@ public interface StudentArrayOperation {
 	 * @throws IllegalArgumentException
 	 */
 	Student[] getByBirthDate(Date date) {
-		Student[] dateo;
+		this.dateo=new Student[Student.length()];
 		for(int i=0;i<Student.length();i++) {
 			if(Student.birthDate==date)
 				dateo.add(Student);
