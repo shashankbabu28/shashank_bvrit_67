@@ -197,9 +197,11 @@ public interface StudentArrayOperation {
 	 * @throws IllegalArgumentException
 	 */
 	Student[] getByBirthDate(Date date) {
+		if(date==null)
+			throw new IllegalArgumentException;
 		this.dateo=new Student[Student.length()];
 		for(int i=0;i<Student.length();i++) {
-			if(Student.birthDate==date)
+			if(Student.birthDate<=date)
 				dateo.add(Student);
 		}
 		return dateo;
