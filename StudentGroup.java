@@ -25,9 +25,9 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudents() {
-		Student[] gs;
+		public Student[] gs;
 		for(int i=0;i<students.length();i++)
-			gs.add(students[i]);
+			gs[i]=(students[i]);
 		
 		// Add your implementation here
 		return gs;
