@@ -70,7 +70,6 @@ public interface StudentArrayOperation {
 	 * @throws IllegalArgumentException
 	 */
 	void add(Student student, int index);
-
 	
 	/**
 	 * Inserts the specified element at the beginning of this array if student
@@ -82,6 +81,8 @@ public interface StudentArrayOperation {
 	 * @throws IllegalArgumentException
 	 */
 	void addFirst(Student student);
+		
+	
 	
 
 	/**
@@ -106,10 +107,7 @@ public interface StudentArrayOperation {
 	 * 
 	 * @throws IllegalArgumentException
 	 */
-	void remove(int index) {
-		for(int i=index;i<Student.length();i++)
-			Student[i]=Student[i+1];
-	}
+	void remove(int index);
 	}
 	
 
@@ -199,7 +197,14 @@ public interface StudentArrayOperation {
 	 * 
 	 * @throws IllegalArgumentException
 	 */
-	Student[] getByBirthDate(Date date);
+	Student[] getByBirthDate(Date date) {
+		Student[] dateo=new Student[];
+		for(int i=0;i<Student.length();i++) {
+			if(Student.birthDate==date)
+				dateo.add(Student);
+		}
+		return dateo;
+	}
 
 	
 	/**
