@@ -149,6 +149,16 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
+		if(date==null)
+			throw new IllegalArgumentException();
+		else {
+			Student[] dob;
+			for(int i=0;i<students.length;i++) {
+				if(students[i].birthDate<=date)
+					dob.add(students[i]);
+			}
+			return dob;
+		}
 		return null;
 	}
 
