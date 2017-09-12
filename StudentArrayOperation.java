@@ -33,7 +33,13 @@ public interface StudentArrayOperation {
 	 *
 	 * @param index
 	 */
-	Student getStudent(int index);
+	Student getStudent(int index) {
+		if(index==0||index>students.length())
+			throw new IllegalArgumentException();
+		else {
+			return students[index];
+		}
+	}
 	
 
 	
@@ -51,13 +57,8 @@ public interface StudentArrayOperation {
 	 * 
 	 * @throws IllegalArgumentException
 	 */
-	void setStudent(Student student, int index) {
-		if(student==null)
-			throw new IllegalArgumentException();
-		else {
-			students[index]=student;
-		}
-	}
+	void setStudent(Student student, int index);
+		
 
 	
 	/**
