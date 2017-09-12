@@ -53,7 +53,7 @@ public interface StudentArrayOperation {
 	 */
 	void setStudent(Student student, int index) {
 		if(student==null)
-			throw new IllegalArgumentException;
+			throw new IllegalArgumentException();
 		else {
 			Student[index]=student;
 		}
