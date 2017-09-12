@@ -198,7 +198,7 @@ public interface StudentArrayOperation {
 	 * @throws IllegalArgumentException
 	 */
 	Student[] getByBirthDate(Date date) {
-		Student[] dateo=new Student[];
+		Student[] dateo;
 		for(int i=0;i<Student.length();i++) {
 			if(Student.birthDate==date)
 				dateo.add(Student);
