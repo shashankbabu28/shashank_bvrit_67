@@ -55,7 +55,7 @@ public interface StudentArrayOperation {
 		if(student==null)
 			throw new IllegalArgumentException();
 		else {
-			Student[index]=student;
+			students[index]=student;
 		}
 	}
 
